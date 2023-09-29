@@ -5,15 +5,15 @@ import './Cards.css';
 function Cards() {
 
     const Card_data = [
-        { id: 1, image: 'img-1', text: 'Explore hindi mountains', label: 'Adventure' },
-        { id: 3, image: 'img-3', text: 'Explore mediterranean sea', label: 'Adventure' },
-        { id: 4, image: 'img-4', text: 'Explore brazilian paradise', label: 'Culture' },
+        { id: 1, image: 'https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1600', text: 'Explore hindi mountains', label: 'Adventure' },
+        { id: 3, image: 'https://images.pexels.com/photos/2105834/pexels-photo-2105834.jpeg?auto=compress&cs=tinysrgb&w=1600', text: 'Explore mediterranean sea', label: 'Adventure' },
+        { id: 4, image: 'https://images.pexels.com/photos/13911606/pexels-photo-13911606.jpeg?auto=compress&cs=tinysrgb&w=1600', text: 'Explore brazilian paradise', label: 'Culture' },
     ]
 
     const Card_data_1 = [
-        { id: 5, image: 'img-5', text: 'Try out new food', label: 'Luxury' },
-        { id: 6, image: 'img-6', text: 'Explore japanese culture', label: 'Culture' },
-        { id: 7, image: 'img-7', text: 'Explore musical tradition', label: 'Culture' }
+        { id: 5, image: 'https://images.pexels.com/photos/262897/pexels-photo-262897.jpeg?auto=compress&cs=tinysrgb&w=1600', text: 'Try out new food', label: 'Luxury' },
+        { id: 6, image: 'https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', text: 'Explore japanese culture', label: 'Culture' },
+        { id: 7, image: 'https://images.pexels.com/photos/16364253/pexels-photo-16364253/free-photo-of-bateria-percussao-tambores-instrumento.jpeg?auto=compress&cs=tinysrgb&w=1600', text: 'Explore musical tradition', label: 'Culture' }
     ]
 
     return (
@@ -23,13 +23,13 @@ function Cards() {
                 <div className='cards__wrapper'>
                     <ul className='cards__items'>
                         <CardItem
-                            src='images/img-9.jpg'
+                            src='https://images.pexels.com/photos/2406395/pexels-photo-2406395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
                             text="Explore the hidden waterfall deep inside the Amazon Jungle"
                             label='Adventure'
                             path='/services'
                         />
                         <CardItem
-                            src='images/img-2.jpg'
+                            src='https://images.pexels.com/photos/3671510/pexels-photo-3671510.jpeg?auto=compress&cs=tinysrgb&w=1600'
                             text="Travel through the Islands of Bali in a Private Cruise"
                             label='Luxury'
                             path='/services'
@@ -38,7 +38,7 @@ function Cards() {
                     <ul className='cards__items'>
                         {Card_data.map((card) =>
                             <CardItem
-                                src={'images/'+card.image+'.jpg'}
+                                src={card.image}
                                 text={card.text}
                                 label={card.label}
                                 path='/services'
@@ -48,7 +48,7 @@ function Cards() {
                     <ul className='cards__items'>
                         {Card_data_1.map((card) =>
                             <CardItem
-                                src={'images/'+card.image+'.jpg'}
+                                src={card.image}
                                 text={card.text}
                                 label={card.label}
                                 path='/services'
